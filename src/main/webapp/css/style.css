@@ -1,0 +1,213 @@
+/* Variables */
+:root {
+    /* Title */
+    --title-height: 6rem;
+    --title-lr-padding: 3rem;
+
+    /* Buttons */
+    --btn-width: 15rem;
+
+    /* Centered List */
+    --c-list-padding: 2rem;
+
+    /* Username Login Modal */
+    --usrnm-width: 25rem;
+    --usrnm-height: 7rem;
+}
+
+/* Styles */
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: Helvetica, sans-serif;
+}
+
+/* Title Area */
+div.title {
+    display: flex;
+    justify-content: space-between;
+    background-color: #25496e;
+    height: var(--title-height);
+    padding-left: var(--title-lr-padding);
+    padding-right: var(--title-lr-padding);
+}
+
+div.title * {
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+button {
+    width: var(--btn-width);
+    height: 3rem;
+    color: azure;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    background-color: #4451ce;
+    border: none;
+    border-radius: 0.5rem;
+    margin: 5px 1rem;
+    cursor: pointer;
+}
+
+button.inactive {
+    color: #869191;
+    background-color: #2b3385;
+    cursor: default;
+}
+
+h2 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+h4 {
+    margin: 0;
+}
+
+/* Centered List */
+div.centered_list {
+    display: block;
+    justify-content: center;
+    height: calc(100% - 2 * var(--c-list-padding));
+    margin: 0 15rem;
+    border-radius: 0 0 2rem 2rem;
+    padding: var(--c-list-padding);
+    text-align: center;
+    background-color: white;
+}
+
+div.centered_list ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: auto;
+    height: calc(100% - 2 * 3rem);
+}
+
+div.centered_list ul li {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+div.centered_list button {
+    position: fixed;
+    margin-left: calc(var(--btn-width) / -2);
+    bottom: 1rem;
+}
+
+/* Username Modal */
+div#login {
+    width: var(--usrnm-width);
+    height: var(--usrnm-height);
+    color: white;
+    background-color: #3668a1;
+    display: none;
+    position: fixed;
+    top: calc(50% - var(--usrnm-height) / 2);
+    right: calc(50% - var(--usrnm-width) / 2);
+    text-align: center;
+    border-radius: 1rem;
+}
+
+/* Grid Structure */
+div.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+div.answer h3 {
+    margin: 1rem;
+    font-size: 3rem;
+}
+
+/* Menu Screen */
+div#menu {
+    height: calc(100vh - var(--title-height));
+    background-color: lightgray;
+}
+
+ul#lobby_list li {
+    cursor: pointer;
+}
+
+/* Lobby Screen */
+div#lobby {
+    height: calc(100vh - var(--title-height));
+    background-color: lightgray;
+    display: none;
+}
+
+/* Prompt/Answer Screen */
+div.input {
+    height: calc(100vh - var(--title-height));
+    background-color: lightgray;
+    display: none;
+    text-align: center;
+}
+
+div.input h1 {
+    margin: 0;
+    padding: 1rem;
+    font-size: 4rem;
+}
+
+div.input textarea {
+    font-size: 3rem;
+    text-align: center;
+}
+
+#timer {
+    padding: 1rem;
+    font-size: 3rem;
+}
+
+/* Waiting Screen */
+div#waiting {
+    height: calc(100vh - var(--title-height));
+    background-color: lightgray;
+    display: none;
+    text-align: center;
+}
+
+div#waiting h1 {
+    margin: 0;
+    padding: 1rem;
+    font-size: 4rem;
+}
+
+/* Voting Screen */
+div#voting {
+    height: calc(100vh - var(--title-height));
+    background-color: lightgray;
+    text-align: center;
+    display: none;
+}
+
+div#voting h1 {
+    margin: 0;
+    padding: 1rem;
+    font-size: 4rem;
+}
+
+div#voting textarea {
+    font-size: 3rem;
+}
+
+/* End Screen */
+div#end {
+    height: calc(100vh - var(--title-height));
+    background-color: lightgray;
+    text-align: center;
+    display: none;
+}
+
+div#end h1 {
+    margin: 0;
+    padding: 1rem;
+    font-size: 4rem;
+}
+
+div#end ul {
+    list-style-type: none;
+}

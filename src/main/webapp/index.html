@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Chat Server</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="theme-color" content="#fafafa">
+  <script src="js/main.js" type="module" defer></script>
+</head>
+
+<body>
+<div class="title">
+  <h1>Quiplash</h1>
+  <a href="about.html">About</a>
+</div>
+<div id="screen">
+  <div id="menu">
+    <div class="centered_list">
+      <h2>Available Lobbies:</h2>
+      <ul id="lobby_list"></ul>
+      <button id="create" onclick="createLobby()">Create New Game</button>
+    </div>
+  </div>
+  <div id="lobby">
+    <div class="centered_list">
+      <h2 id="lobby_label">Lobby {code} Players:</h2>
+      <ul id="player_list"></ul>
+      <button id="start" class="inactive" onclick="">Start Game</button>
+    </div>
+  </div>
+  <div id="prompt" class="input">
+    <h1>Enter a prompt: </h1>
+    <textarea name="prompt" id="prompt_field" cols="30" rows="5"></textarea>
+  </div>
+  <div id="waiting">
+    <h1 id="waiting_message">Waiting for {player} to create a prompt.</h1>
+  </div>
+  <div id="answer" class="input">
+    <h1 id="prompt_display">{prompt}:</h1>
+    <textarea name="answer" id="answer_field" cols="30" rows="5"></textarea>
+    <br/>
+    <div id="timer"></div>
+    <!--    <br/>-->
+    <!--    <button id="submit">Submit Broken rn, Ctrl + Enter to submit</button>-->
+  </div>
+  <div id="voting">
+    <h1 id="prompt_label">{prompt}:</h1>
+    <div class="grid">
+      <div class="answer">
+        <h3 id="player1_name">{player1}</h3>
+        <textarea id="player1_answer" cols="30" rows="5" readonly>{player1 answer}</textarea>
+        <button class="vote" id="vote1">Vote</button>
+      </div>
+      <div class="answer">
+        <h3 id="player2_name">{player2}</h3>
+        <textarea id="player2_answer" cols="30" rows="5" readonly>{player2 answer}</textarea>
+        <button class="vote" id="vote2">Vote</button>
+      </div>
+    </div>
+  </div>
+  <div id="end">
+    <div class="centered_list">
+      <h2>Leaderboard:</h2>
+      <ul id="scoreboard"></ul>
+    </div>
+  </div>
+</div>
+<div id="login">
+  <h3>Enter a username:</h3>
+  <input type="text" name="username" id="username">
+</div>
+</body>
+
+</html>
